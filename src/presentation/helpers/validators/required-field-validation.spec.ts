@@ -4,7 +4,7 @@ import { RequiredFieldValidation } from './required-field-validation'
 const makeSut = (): RequiredFieldValidation => new RequiredFieldValidation('required_field')
 
 describe('RequiredField Validation', () => {
-  test('should return an MissingParamError if validation fails', () => {
+  test('should return a MissingParamError if validation fails', () => {
     const sut = makeSut()
     const error = sut.validate({ any_field: 'any_value' })
     expect(error).toEqual(new MissingParamError('required_field'))
